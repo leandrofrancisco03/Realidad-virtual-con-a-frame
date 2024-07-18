@@ -1,0 +1,215 @@
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.6.0/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-environment-component/dist/aframe-environment-component.min.js"></script>
+    <script src="https://unpkg.com/aframe-environment-component@latest/dist/aframe-environment-component.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+      <a-assets>
+        <img id="pisoTexture" src="textures/marble.jpg">
+        <img id="paredesTexture" src="textures/bricks1.jpg">
+        <img id="paredesAdentroTexture" src="textures/wallpainting1.jpg">
+        <img id="techoTexture" src="textures/tiles.jpg">
+<!--sonido museo-->
+ <audio id="music" src="music/254.mp3" autoplay="true" loop="true"></audio>
+      
+
+        <audio id="click-sound" src="https://cdn.aframe.io/360-image-gallery-boilerplate/audio/click.ogg"></audio>
+
+        <a-asset-item id="fancy-frame-obj" src="models/058-6171___A_.dwg.OBJ"></a-asset-item>
+      </a-assets>
+    
+
+
+  <a-entity position="0 0 0">
+    <!-- Paredes del museo -->
+    <a-box src="#paredesTexture" position="0 5 -15" width="30" height="10" depth="1"></a-box>
+    <a-box src="#paredesTexture" position="0 5 15" width="30" height="10" depth="1"></a-box>
+    <a-box src="#paredesTexture" position="15 5 0" width="1" height="10" depth="30"></a-box>
+    <a-box src="#paredesTexture" position="-15 5 10" width="1" height="10" depth="10"></a-box>
+    <a-box src="#paredesTexture" position="-15 5 -7" width="1" height="10" depth="15"></a-box>
+
+    <!--  dentro del museo -->
+    <a-box src="#paredesAdentroTexture" position="0 5 -5" width="5" height="10" depth="10"></a-box>
+    <a-box src="#paredesAdentroTexture" position="0 5 5" width="5" height="10" depth="10"></a-box>
+    <!--Techo del museo -->
+    <a-box src="#techoTexture" position="0 10 0" width="30" height="1" depth="30"></a-box>
+    <!--piso del museo -->
+    <a-box src="#pisoTexture" repeat="3 3 " color="white" position="0 0 0" width="30" height="1" depth="30"></a-box>
+    <a-box src="textures/wood.jpg" color="white" position="-15 0 2.75" width="1" height="0.9" depth="4.5"></a-box>
+    
+
+    <!--columnas-->
+    <a-box scale="1 0.49103 0.379" src="textures/wood.jpg" color="white" position="-15.21459 5.15292 0.63495" width="0.5" height="20" depth="1"></a-box>
+    <a-box id="updateMe" scale="1 0.49103 0.379" src="textures/wood.jpg" color="white" position="-15.20981 5.10475 4.80681" width="0.5" height="20" depth="1"></a-box>
+
+
+   
+  </a-entity>
+
+   <!--Cuadros impresionismo-->
+   <a-entity position="-10 5 -14.30" class="impresionismo">
+    <a-entity
+    geometry="primitive: plane; height: 2; width: 3"
+    material="src: url(img/impresionismo1.jpg)">
+  </a-entity>
+  </a-entity>
+
+  <a-entity position="-3 5 -14.30" class="impresionismo">
+    <a-entity
+        geometry="primitive: plane; height: 2; width: 3"
+        material="src: url(img/impresionismo2.jpg)"
+    ></a-entity>
+  </a-entity>
+
+  <a-entity position="4 5 -14.30" class="impresionismo">
+    <a-entity
+        geometry="primitive: plane; height: 2; width: 3"
+        material="src: url(img/impresionismo3.jpg)"
+    ></a-entity>
+  </a-entity>
+
+
+
+  <!--Cuadros cubismo-->
+  <a-entity position="-10 5 -14.30" class="cubismo">
+    <a-entity
+    geometry="primitive: plane; height: 2; width: 3"
+    material="src: url(img/cubismo1.jpg)">
+  </a-entity>
+  </a-entity>
+
+  <a-entity position="-3 5 -14.30" class="cubismo">
+    <a-entity
+        geometry="primitive: plane; height: 2; width: 3"
+        material="src: url(img/cubismo2.jpg)"
+    ></a-entity>
+  </a-entity>
+
+  <a-entity position="4 5 -14.30" class="cubismo">
+    <a-entity
+        geometry="primitive: plane; height: 2; width: 3"
+        material="src: url(img/cubismo3.jpg)"
+    ></a-entity>
+  </a-entity>
+    
+
+  <!--Cuadros surrealismo-->
+  <a-entity position="-10 5 -14.30" class="surrealismo">
+    <a-entity
+    geometry="primitive: plane; height: 2; width: 3"
+    material="src: url(img/surrealismo1.jpg)">
+  </a-entity>
+  </a-entity>
+
+  <a-entity position="-3 5 -14.30" class="surrealismo">
+    <a-entity
+        geometry="primitive: plane; height: 2; width: 3"
+        material="src: url(img/surrealismo2.jpg)"
+    ></a-entity>
+  </a-entity>
+
+  <a-entity position="4 5 -14.30" class="surrealismo">
+    <a-entity
+        geometry="primitive: plane; height: 2; width: 3"
+        material="src: url(img/surrealismo3.jpg)"
+    ></a-entity>
+  </a-entity>
+
+
+
+<!--Opciones del museo-->
+      <a-entity position="-21 2 -5">
+        <a-entity class="link" id="cubismo-option"
+          geometry="primitive: plane; height: 1; width: 2"
+          material="shader: flat; src: #cubes-thumb"
+          sound="on: click; src: #click-sound">
+          <a-text value="cubismo" color="black" align="center" position="0 0 0"></a-text>
+        </a-entity>
+
+        <a-entity class="link" id="impresionismo-option"
+        geometry="primitive: plane; height: 1; width: 2"
+        material="shader: flat; src: #cubes-thumb"
+        sound="on: click; src: #click-sound" position="3 0 0">
+        <a-text value="impresionismo" color="black" align="center" position="0 0 0"></a-text>
+        </a-entity>
+
+        <a-entity class="link" id="surrealismo-option"
+        geometry="primitive: plane; height: 1; width: 2"
+        material="shader: flat; src: #cubes-thumb"
+        sound="on: click; src: #click-sound" position="-3 0 0">
+        <a-text value="surrealismo" color="black" align="center" position="0 0 0"></a-text>
+        </a-entity>
+
+
+        <a-entity obj-model="obj: #fancy-frame-obj;" position="-18 2 -3" scale="4 4 4"></a-entity>
+    </a-entity>
+
+
+
+
+
+
+      <a-camera position="-19 2 5" rotation="-100 -80 0">
+        <a-cursor></a-cursor>
+      </a-camera>
+   <a-entity environment="preset: forest; dressingAmount: 100"></a-entity> 
+
+
+
+   <script>
+    document.getElementById('cubismo-option').addEventListener('click', function() {
+        document.querySelectorAll('.cubismo').forEach(function(el) {
+            el.setAttribute('visible', true);
+        });
+        document.querySelectorAll('.impresionismo').forEach(function(el) {
+            el.setAttribute('visible', false);
+        });
+        document.querySelectorAll('.surrealismo').forEach(function(el) {
+            el.setAttribute('visible', false);
+        });
+    });
+
+    document.getElementById('impresionismo-option').addEventListener('click', function() {
+        document.querySelectorAll('.cubismo').forEach(function(el) {
+            el.setAttribute('visible', false);
+        });
+        document.querySelectorAll('.impresionismo').forEach(function(el) {
+            el.setAttribute('visible', true);
+        });
+        document.querySelectorAll('.surrealismo').forEach(function(el) {
+            el.setAttribute('visible', false);
+        });
+    });
+
+    document.getElementById('surrealismo-option').addEventListener('click', function() {
+        document.querySelectorAll('.cubismo').forEach(function(el) {
+            el.setAttribute('visible', false);
+        });
+        document.querySelectorAll('.impresionismo').forEach(function(el) {
+            el.setAttribute('visible', false);
+        });
+        document.querySelectorAll('.surrealismo').forEach(function(el) {
+            el.setAttribute('visible', true);
+        });
+    });
+
+</script>
+    </a-scene>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+  </body>
+</html>
