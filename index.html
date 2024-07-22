@@ -7,12 +7,12 @@
   <body>
     <a-scene>
       <a-assets>
-        <img id="pisoTexture" src="textures/marble.jpg">
+        <!-- <img id="pisoTexture" src="textures/marble.jpg"> -->
         <img id="paredesTexture" src="textures/bricks1.jpg">
-        <img id="paredesAdentroTexture" src="textures/wallpainting1.jpg">
-        <img id="techoTexture" src="textures/tiles.jpg">
+        <!-- <img id="paredesAdentroTexture" src="textures/wallpainting1.jpg">
+        <img id="techoTexture" src="textures/tiles.jpg">  -->
 <!--sonido museo-->
- <audio id="music" src="music/254.mp3" autoplay="true" loop="true"></audio>
+  <audio id="music" src="music/254.mp3" autoplay="true" loop="true"></audio>
       
 
         <audio id="click-sound" src="https://cdn.aframe.io/360-image-gallery-boilerplate/audio/click.ogg"></audio>
@@ -22,27 +22,49 @@
     
 
 
+
   <a-entity position="0 0 0">
     <!-- Paredes del museo -->
-    <a-box src="#paredesTexture" position="0 5 -15" width="30" height="10" depth="1"></a-box>
-    <a-box src="#paredesTexture" position="0 5 15" width="30" height="10" depth="1"></a-box>
-    <a-box src="#paredesTexture" position="15 5 0" width="1" height="10" depth="30"></a-box>
-    <a-box src="#paredesTexture" position="-15 5 10" width="1" height="10" depth="10"></a-box>
-    <a-box src="#paredesTexture" position="-15 5 -7" width="1" height="10" depth="15"></a-box>
+    <a-box  scale="0.32588 1 1" src="#paredesTexture" position="-10.0592 5 -15" width="30" height="10" depth="1"></a-box>
+    <a-box  scale="0.96616 1 1"  src="#paredesTexture" position="14.42528 5 -15" width="30" height="10" depth="1"></a-box>
+    <a-box  scale="1.00949 1 1"  src="#paredesTexture" position="48.61171 5 -15" width="30" height="10" depth="1"></a-box>
+    <a-box  scale="0.28871 1 0.99"  src="#paredesTexture" position="-11.66364 5 17.37851" width="30" height="10" depth="1"></a-box>
+    <a-box  scale="1.13911 1 0.99"  src="#paredesTexture" position="14.42549 5 17.37851" width="30" height="10" depth="1"></a-box>
+    <a-box     scale="0.936 1 0.99"  src="#paredesTexture" position="49.30585 5 17.379" width="30" height="10" depth="1"></a-box>
+    <a-box  scale="1 1 0.336"  src="#paredesTexture" position="17.79761 5 -9.52911" width="1" height="10" depth="30"></a-box>
+    <a-box     scale="1 1 0.21"  src="#paredesTexture" position="63.274 5 -11.56895" width="1" height="10" depth="30"></a-box>
+    <a-box   scale="1 1 0.73"  src="#paredesTexture" position="63.158 5 6.99934" width="1" height="10" depth="30"></a-box>
+    <a-box scale="1 1 0.544"  src="#paredesTexture" position="17.798 5 8.73827" width="1" height="10" depth="30"></a-box>
+    <a-box  scale="1 1 1.86493"  src="#paredesTexture" position="-15.439 5 7.57582" width="1" height="10" depth="10"></a-box>
+    <a-box   scale="1 1 0.65176"  src="#paredesTexture" position="-15.439 5 -10.62816" width="1" height="10" depth="15"></a-box>
+  
+    <!--paredes adentro-->
+    <a-box    scale="1 1 8.00148"  src="#paredesTexture" position="5.89956 5 -5.00019" width="1" height="10" depth="1"></a-box>
+    <a-box   rotation="0 90 0"   scale="1 1 15.058"  src="#paredesTexture" position="-2.08312 5 -8.48515" width="1" height="10" depth="1"></a-box>
+
+    <a-box rotation="0 90 0"   scale="1 1 20.545"  src="#paredesTexture" position="3.226 5 11.49214" width="1" height="10" depth="1"></a-box>
+    <a-box    scale="1 1 13.66796"  src="#paredesTexture" position="-6.52174 5 4.35652" width="1" height="10" depth="1"></a-box>
+
+    <!--segunda habitacion-->
+    <a-box    scale="1 1 8.00148"  src="#paredesTexture" position="53.1478 5 -5.00019" width="1" height="10" depth="1"></a-box>
+    <a-box  rotation="0 90 0"   scale="1 1 27.69691"  src="#paredesTexture" position="39.19889 5 -8.413" width="1" height="10" depth="1"></a-box>
+
+    <a-box   rotation="0 90 0"   scale="1 1 27.951"  src="#paredesTexture" position="40.976 5 11.4875" width="1" height="10" depth="1"></a-box>
+    <a-box  scale="1 1 13.66796"  src="#paredesTexture" position="27.51688 5 4.35652" width="1" height="10" depth="1"></a-box>
 
     <!--  dentro del museo -->
-    <a-box src="#paredesAdentroTexture" position="0 5 -5" width="5" height="10" depth="10"></a-box>
-    <a-box src="#paredesAdentroTexture" position="0 5 5" width="5" height="10" depth="10"></a-box>
+    <!-- <a-box src="#paredesAdentroTexture" position="0 5 -5" width="5" height="10" depth="10"></a-box>
+    <a-box src="#paredesAdentroTexture" position="0 5 5" width="5" height="10" depth="10"></a-box> -->
     <!--Techo del museo -->
-    <a-box src="#techoTexture" position="0 10 0" width="30" height="1" depth="30"></a-box>
+    <!-- <a-box src="#techoTexture" position="0 10 0" width="30" height="1" depth="30"></a-box> -->
     <!--piso del museo -->
-    <a-box src="#pisoTexture" repeat="3 3 " color="white" position="0 0 0" width="30" height="1" depth="30"></a-box>
-    <a-box src="textures/wood.jpg" color="white" position="-15 0 2.75" width="1" height="0.9" depth="4.5"></a-box>
+    <!-- <a-box src="#pisoTexture" repeat="3 3 " color="white" position="0 0 0" width="30" height="1" depth="30"></a-box> -->
+    <!-- <a-box src="textures/wood.jpg" color="white" position="-15 0 2.75" width="1" height="0.9" depth="4.5"></a-box> -->
     
 
     <!--columnas-->
-    <a-box scale="1 0.49103 0.379" src="textures/wood.jpg" color="white" position="-15.21459 5.15292 0.63495" width="0.5" height="20" depth="1"></a-box>
-    <a-box id="updateMe" scale="1 0.49103 0.379" src="textures/wood.jpg" color="white" position="-15.20981 5.10475 4.80681" width="0.5" height="20" depth="1"></a-box>
+    <!-- <a-box scale="1 0.49103 0.379" src="textures/wood.jpg" color="white" position="-15.21459 5.15292 0.63495" width="0.5" height="20" depth="1"></a-box>
+    <a-box id="updateMe" scale="1 0.49103 0.379" src="textures/wood.jpg" color="white" position="-5.69415 5 -7.88557" width="0.5" height="20" depth="1"></a-box> -->
 
 
    
@@ -51,21 +73,35 @@
    <!--Cuadros impresionismo-->
    <a-entity position="-10 5 -14.30" class="impresionismo">
     <a-entity
-    geometry="primitive: plane; height: 2; width: 3"
+    geometry="primitive: plane; height: 3; width: 4"
     material="src: url(img/impresionismo1.jpg)">
   </a-entity>
   </a-entity>
 
-  <a-entity position="-3 5 -14.30" class="impresionismo">
+  <a-entity position="5 5 -14.30" class="impresionismo">
     <a-entity
-        geometry="primitive: plane; height: 2; width: 3"
+        geometry="primitive: plane; height: 3; width: 4"
         material="src: url(img/impresionismo2.jpg)"
     ></a-entity>
   </a-entity>
 
-  <a-entity position="4 5 -14.30" class="impresionismo">
+  <a-entity  position="12 5 -14.30" class="impresionismo">
     <a-entity
-        geometry="primitive: plane; height: 2; width: 3"
+        geometry="primitive: plane; height: 3; width: 4"
+        material="src: url(img/impresionismo3.jpg)"
+    ></a-entity>
+  </a-entity>
+
+  <a-entity id="updateMe" position="-5.69 5 -7.886" class="impresionismo">
+    <a-entity
+        geometry="primitive: plane; height: 3; width: 4"
+        material="src: url(img/impresionismo3.jpg)"
+    ></a-entity>
+  </a-entity>
+
+  <a-entity id="updateMe" position="1.8 5 -7.886" class="impresionismo">
+    <a-entity
+        geometry="primitive: plane; height: 3; width: 4"
         material="src: url(img/impresionismo3.jpg)"
     ></a-entity>
   </a-entity>
@@ -75,44 +111,71 @@
   <!--Cuadros cubismo-->
   <a-entity position="-10 5 -14.30" class="cubismo">
     <a-entity
-    geometry="primitive: plane; height: 2; width: 3"
+    geometry="primitive: plane; height: 3; width: 4"
     material="src: url(img/cubismo1.jpg)">
   </a-entity>
   </a-entity>
 
-  <a-entity position="-3 5 -14.30" class="cubismo">
+  <a-entity position="5 5 -14.30" class="cubismo">
     <a-entity
-        geometry="primitive: plane; height: 2; width: 3"
+        geometry="primitive: plane; height: 3; width: 4"
         material="src: url(img/cubismo2.jpg)"
     ></a-entity>
   </a-entity>
 
-  <a-entity position="4 5 -14.30" class="cubismo">
+  <a-entity position="12 5 -14.30" class="cubismo">
     <a-entity
-        geometry="primitive: plane; height: 2; width: 3"
+        geometry="primitive: plane; height: 3; width: 4"
+        material="src: url(img/cubismo3.jpg)"
+    ></a-entity>
+  </a-entity>
+
+  <a-entity position="-5.69 5 -7.886" class="cubismo">
+    <a-entity
+        geometry="primitive: plane; height: 3; width: 4"
         material="src: url(img/cubismo3.jpg)"
     ></a-entity>
   </a-entity>
     
+  <a-entity position="1.8 5 -7.886" class="cubismo">
+    <a-entity
+        geometry="primitive: plane; height: 3; width: 4"
+        material="src: url(img/cubismo3.jpg)"
+    ></a-entity>
+  </a-entity>
 
   <!--Cuadros surrealismo-->
   <a-entity position="-10 5 -14.30" class="surrealismo">
     <a-entity
-    geometry="primitive: plane; height: 2; width: 3"
+    geometry="primitive: plane; height: 3; width: 4"
     material="src: url(img/surrealismo1.jpg)">
   </a-entity>
   </a-entity>
 
-  <a-entity position="-3 5 -14.30" class="surrealismo">
+  <a-entity position="5 5 -14.30" class="surrealismo">
     <a-entity
-        geometry="primitive: plane; height: 2; width: 3"
+        geometry="primitive: plane; height: 3; width: 4"
         material="src: url(img/surrealismo2.jpg)"
     ></a-entity>
   </a-entity>
 
-  <a-entity position="4 5 -14.30" class="surrealismo">
+  <a-entity position="12 5 -14.30" class="surrealismo">
     <a-entity
-        geometry="primitive: plane; height: 2; width: 3"
+        geometry="primitive: plane; height: 3; width: 4"
+        material="src: url(img/surrealismo3.jpg)"
+    ></a-entity>
+  </a-entity>
+
+  <a-entity position="-5.69 5 -7.886" class="surrealismo">
+    <a-entity
+        geometry="primitive: plane; height: 3; width: 4"
+        material="src: url(img/surrealismo3.jpg)"
+    ></a-entity>
+  </a-entity>
+
+  <a-entity position="1.8 5 -7.886" class="surrealismo">
+    <a-entity
+        geometry="primitive: plane; height: 3; width: 4"
         material="src: url(img/surrealismo3.jpg)"
     ></a-entity>
   </a-entity>
@@ -151,10 +214,10 @@
 
 
 
-      <a-camera position="-19 2 5" rotation="-100 -80 0">
+       <a-camera position="-19 3 5" rotation="-100 -80 0">
         <a-cursor></a-cursor>
-      </a-camera>
-   <a-entity environment="preset: forest; dressingAmount: 100"></a-entity> 
+      </a-camera> 
+  <a-entity environment="preset: default; dressingAmount: 10"></a-entity> 
 
 
 
@@ -169,6 +232,7 @@
         document.querySelectorAll('.surrealismo').forEach(function(el) {
             el.setAttribute('visible', false);
         });
+        
     });
 
     document.getElementById('impresionismo-option').addEventListener('click', function() {
@@ -181,6 +245,7 @@
         document.querySelectorAll('.surrealismo').forEach(function(el) {
             el.setAttribute('visible', false);
         });
+        
     });
 
     document.getElementById('surrealismo-option').addEventListener('click', function() {
@@ -193,7 +258,11 @@
         document.querySelectorAll('.surrealismo').forEach(function(el) {
             el.setAttribute('visible', true);
         });
+        
     });
+
+
+
 
 </script>
     </a-scene>
