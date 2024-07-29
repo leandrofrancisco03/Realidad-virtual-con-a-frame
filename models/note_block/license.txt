@@ -1,0 +1,11 @@
+Model Information:
+* title:	Note block
+* source:	https://sketchfab.com/3d-models/note-block-3706db777e724bf095ca5f7a40bbaa96
+* author:	millerovad (https://sketchfab.com/millerovad)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Note block" (https://sketchfab.com/3d-models/note-block-3706db777e724bf095ca5f7a40bbaa96) by millerovad (https://sketchfab.com/millerovad) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

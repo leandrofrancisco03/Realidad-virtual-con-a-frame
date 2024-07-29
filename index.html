@@ -2,22 +2,28 @@
   <head>
     <script src="https://aframe.io/releases/1.6.0/aframe.min.js"></script>
     <script src="https://unpkg.com/aframe-environment-component/dist/aframe-environment-component.min.js"></script>
-    <script src="https://unpkg.com/aframe-environment-component@latest/dist/aframe-environment-component.min.js"></script>
   </head>
   <body>
     <a-scene>
       <a-assets>
-        <!-- <img id="pisoTexture" src="textures/marble.jpg"> -->
-        <img id="paredesTexture" src="textures/bricks1.jpg">
-        <!-- <img id="paredesAdentroTexture" src="textures/wallpainting1.jpg">
-        <img id="techoTexture" src="textures/tiles.jpg">  -->
+         <!-- <img id="pisoTexture" src="textures/marble.jpeg"> -->
+         <!-- <img id="paredesTexture" src="textures/bricks2.jpeg">  -->
+        <!-- <img id="techoTexture" src="textures/tiles.jpeg">   -->
 <!--sonido museo-->
-  <audio id="music" src="music/254.mp3" autoplay="true" loop="true"></audio>
+  <!-- <audio id="music" src="music/254.mp3" autoplay="true" loop="true"></audio> -->
+  <audio id="music" src="music/254.mp3" loop="true"></audio>
       
 
         <audio id="click-sound" src="https://cdn.aframe.io/360-image-gallery-boilerplate/audio/click.ogg"></audio>
 
-        <a-asset-item id="fancy-frame-obj" src="models/058-6171___A_.dwg.OBJ"></a-asset-item>
+
+        <img id="texture-bonsai" src="models/bonsai/textures/01_-_Default_baseColor.jpeg">
+        <a-asset-item id="bonsai" src="models/bonsai/scene.gltf"></a-asset-item>
+
+        <a-asset-item id="banca" src="models/bench/scene.gltf"></a-asset-item>
+
+        <a-asset-item id="luces" src="models/light/scene.gltf"></a-asset-item>
+        <a-asset-item id="note_block" src="models/note_block/scene.gltf"></a-asset-item>
       </a-assets>
     
 
@@ -57,18 +63,27 @@
     <a-box src="#paredesAdentroTexture" position="0 5 5" width="5" height="10" depth="10"></a-box> -->
     <!--Techo del museo -->
     <!-- <a-box src="#techoTexture" position="0 10 0" width="30" height="1" depth="30"></a-box> -->
+
     <!--piso del museo -->
-    <!-- <a-box src="#pisoTexture" repeat="3 3 " color="white" position="0 0 0" width="30" height="1" depth="30"></a-box> -->
-    <!-- <a-box src="textures/wood.jpg" color="white" position="-15 0 2.75" width="1" height="0.9" depth="4.5"></a-box> -->
-    
-
-    <!--columnas-->
-    <!-- <a-box scale="1 0.49103 0.379" src="textures/wood.jpg" color="white" position="-15.21459 5.15292 0.63495" width="0.5" height="20" depth="1"></a-box>
-    <a-box id="updateMe" scale="1 0.49103 0.379" src="textures/wood.jpg" color="white" position="-5.69415 5 -7.88557" width="0.5" height="20" depth="1"></a-box> -->
-
-
-   
+    <!-- <a-plane id="piso" position="24.14 0.1 1.631" src="#pisoTexture" height="78.67" width="32.379" rotation="-90 90 0"></a-plane> -->
+    <!--techo-->
+    <!-- <a-plane id="techo" position="24.14 9.8 1.631" src="#techoTexture" height="78.67" width="32.379" rotation="90 90 0"></a-plane>  -->
   </a-entity>
+
+
+  <!--bonsai-->
+  <!-- <a-entity id="bonsai1" position="4.093 0.115 -0.371" gltf-model="#bonsai" scale="0.03 0.03 0.03"></a-entity>
+  <a-entity id="bonsai2" position="61.12 0.115 -8.796" gltf-model="#bonsai" scale="0.04 0.04 0.04"></a-entity> -->
+  <!--bancas-->
+  <a-entity id="banca1" position="-14.1 0.115 5.306" gltf-model="#banca" scale="0.03 0.03 0.03" rotation="0 90 0"></a-entity>
+  <a-entity id="banca2" position="42.70 0.115 3.035" gltf-model="#banca" scale="0.04 0.04 0.04" rotation="0 0 0"></a-entity>
+  <!--luz1-->
+  <!-- <a-entity id="luz1" position="2.463 7.552 3.119" gltf-model="#luces" scale="0.003 0.003 0.003" rotation="0 90 0"></a-entity>
+  <a-entity light="type: point; intensity: 0.2; color: #FFF" position="2.463 7.552 3.119"></a-entity> -->
+  <!--luz2-->
+  <!-- <a-entity id="luz2" position="40.97 7.552 2.062" gltf-model="#luces" scale="0.003 0.003 0.003" rotation="0 90 0"></a-entity>
+  <a-entity light="type: point; intensity: 0.2; color: #FFF" position="40.97 7.552 2.062"></a-entity> -->
+
 
    <!--Cuadros impresionismo-->
    <a-entity position="-10 5 -14.30" class="impresionismo">
@@ -92,22 +107,180 @@
     ></a-entity>
   </a-entity>
 
-  <a-entity id="updateMe" position="-5.69 5 -7.886" class="impresionismo">
+  <a-entity position="-5.69 5 -7.886" class="impresionismo">
     <a-entity
         geometry="primitive: plane; height: 3; width: 4"
-        material="src: url(img/impresionismo3.jpg)"
+        material="src: url(img/impresionismo4.jpg)"
     ></a-entity>
   </a-entity>
 
-  <a-entity id="updateMe" position="1.8 5 -7.886" class="impresionismo">
+  <a-entity position="1.8 5 -7.886" class="impresionismo">
     <a-entity
-        geometry="primitive: plane; height: 3; width: 4"
-        material="src: url(img/impresionismo3.jpg)"
+        geometry="primitive: plane; height: 4; width: 4"
+        material="src: url(img/impresionismo5.jpg)"
     ></a-entity>
   </a-entity>
 
+  <a-entity position="-5.84 6 0.662" rotation="0 90 0" class="impresionismo">
+    <a-entity
+        geometry="primitive: plane; height: 3; width: 4"
+        material="src: url(img/impresionismo6.jpg)"
+    ></a-entity>
+  </a-entity>
 
+  <a-entity position="-5.84 6 7.1" rotation="0 90 0" class="impresionismo">
+    <a-entity
+        geometry="primitive: plane; height: 3; width: 4"
+        material="src: url(img/impresionismo7.jpg)"
+    ></a-entity>
+  </a-entity>
 
+  <a-entity position="-0.20 6 10.509" rotation="0 180 0" class="impresionismo">
+    <a-entity
+        geometry="primitive: plane; height: 3; width: 4"
+        material="src: url(img/impresionismo8.jpg)"
+    ></a-entity>
+  </a-entity>
+
+  <a-entity position="8 6 10.509" rotation="0 180 0" class="impresionismo">
+    <a-entity
+        geometry="primitive: plane; height: 3; width: 4"
+        material="src: url(img/impresionismo9.jpg)"
+    ></a-entity>
+  </a-entity>
+
+  <a-entity position="2.3 6 16.607" rotation="0 180 0" class="impresionismo">
+    <a-entity
+        geometry="primitive: plane; height: 3; width: 4"
+        material="src: url(img/impresionismo10.jpg)"
+    ></a-entity>
+  </a-entity>
+
+  <a-entity position="11.4 6 16.607" rotation="0 180 0" class="impresionismo">
+    <a-entity
+        geometry="primitive: plane; height: 3; width: 4"
+        material="src: url(img/impresionismo11.jpg)"
+    ></a-entity>
+  </a-entity>
+
+  <a-entity position="16.82 6 5.3" rotation="0 270 0" class="impresionismo">
+    <a-entity
+        geometry="primitive: plane; height: 5; width: 6"
+        material="src: url(img/impresionismo12.jpg)"
+    ></a-entity>
+  </a-entity>
+
+  <a-entity position="18.37 6 4.1" rotation="0 90 0" class="impresionismo">
+    <a-entity
+        geometry="primitive: plane; height: 3; width: 4"
+        material="src: url(img/impresionismo13.jpg)"
+    ></a-entity>
+  </a-entity>
+
+  <a-entity position="18.37 6 12.5" rotation="0 90 0" class="impresionismo">
+    <a-entity
+        geometry="primitive: plane; height: 3; width: 4"
+        material="src: url(img/impresionismo14.jpg)"
+    ></a-entity>
+  </a-entity>
+
+  <a-entity position="22.50 6 16.8" rotation="0 180 0" class="impresionismo">
+    <a-entity
+        geometry="primitive: plane; height: 4; width: 5"
+        material="src: url(img/impresionismo15.jpg)"
+    ></a-entity>
+  </a-entity>
+
+  <a-entity position="26.76 6 6.974" rotation="0 270 0" class="impresionismo">
+    <a-entity
+        geometry="primitive: plane; height: 4; width: 5"
+        material="src: url(img/impresionismo16.jpg)"
+    ></a-entity>
+  </a-entity>
+
+  <a-entity position="40 6 16.8" rotation="0 180 0" class="impresionismo">
+    <a-entity
+        geometry="primitive: plane; height: 4; width: 5"
+        material="src: url(img/impresionismo17.jpg)"
+    ></a-entity>
+  </a-entity>
+
+  <a-entity position="53.95 6 16.8" rotation="0 180 0" class="impresionismo">
+    <a-entity
+        geometry="primitive: plane; height: 4; width: 5"
+        material="src: url(img/impresionismo18.jpg)"
+    ></a-entity>
+  </a-entity>
+
+  <a-entity position="16.82 6.5 -9.4" rotation="0 270 0" class="impresionismo">
+    <a-entity
+        geometry="primitive: plane; height: 3; width: 4"
+        material="src: url(img/impresionismo19.jpg)"
+    ></a-entity>
+  </a-entity>
+
+  <a-entity position="18.34 6.5 -9.699" rotation="0 90 0" class="impresionismo">
+    <a-entity
+        geometry="primitive: plane; height: 3; width: 4"
+        material="src: url(img/impresionismo20.jpg)"
+    ></a-entity>
+  </a-entity>
+
+  <a-entity position="28.22 6.5 6.062" rotation="0 90 0" class="impresionismo">
+    <a-entity
+        geometry="primitive: plane; height: 3; width: 4"
+        material="src: url(img/impresionismo21.jpg)"
+    ></a-entity>
+  </a-entity>
+
+  <a-entity position="33.33 6.5 10.726" rotation="0 180 0" class="impresionismo">
+    <a-entity
+        geometry="primitive: plane; height: 3; width: 4"
+        material="src: url(img/impresionismo22.jpg)"
+    ></a-entity>
+  </a-entity>
+
+  <a-entity position="45.1 6.5 10.726" rotation="0 180 0" class="impresionismo">
+    <a-entity
+        geometry="primitive: plane; height: 3; width: 4"
+        material="src: url(img/impresionismo23.jpg)"
+    ></a-entity>
+  </a-entity>
+
+  <a-entity position="62.54 6.5 10.1" rotation="0 270 0" class="impresionismo">
+    <a-entity
+        geometry="primitive: plane; height: 5; width: 6"
+        material="src: url(img/impresionismo24.jpg)"
+    ></a-entity>
+  </a-entity>
+
+  <a-entity position="33 6.5 -7.672" rotation="0 0 0" class="impresionismo">
+    <a-entity
+        geometry="primitive: plane; height: 3; width: 4"
+        material="src: url(img/impresionismo25.jpg)"
+    ></a-entity>
+  </a-entity>
+  
+  <a-entity position="46.3 6.5 -7.672" rotation="0 0 0" class="impresionismo">
+    <a-entity
+        geometry="primitive: plane; height: 3; width: 4"
+        material="src: url(img/impresionismo26.jpg)"
+    ></a-entity>
+  </a-entity>
+
+  <a-entity position="48 6 -13.86" rotation="0 0 0" class="impresionismo">
+    <a-entity
+        geometry="primitive: plane; height: 5; width: 6"
+        material="src: url(img/impresionismo27.jpg)"
+    ></a-entity>
+  </a-entity>
+
+  <a-entity position="-7.28 6 6" rotation="0 270 0" class="impresionismo">
+    <a-entity
+        geometry="primitive: plane; height: 4; width: 5"
+        material="src: url(img/impresionismo28.jpg)"
+    ></a-entity>
+  </a-entity>
   <!--Cuadros cubismo-->
   <a-entity position="-10 5 -14.30" class="cubismo">
     <a-entity
@@ -133,17 +306,177 @@
   <a-entity position="-5.69 5 -7.886" class="cubismo">
     <a-entity
         geometry="primitive: plane; height: 3; width: 4"
-        material="src: url(img/cubismo3.jpg)"
+        material="src: url(img/cubismo4.jpg)"
     ></a-entity>
   </a-entity>
     
   <a-entity position="1.8 5 -7.886" class="cubismo">
     <a-entity
-        geometry="primitive: plane; height: 3; width: 4"
-        material="src: url(img/cubismo3.jpg)"
+        geometry="primitive: plane; height: 4; width: 4"
+        material="src: url(img/cubismo5.jpg)"
     ></a-entity>
   </a-entity>
 
+  <a-entity position="-5.84 6 0.662" rotation="0 90 0" class="cubismo">
+    <a-entity
+        geometry="primitive: plane; height: 3; width: 4"
+        material="src: url(img/cubismo6.jpg)"
+    ></a-entity>
+  </a-entity>
+
+  <a-entity position="-5.84 6 7.1" rotation="0 90 0" class="cubismo">
+    <a-entity
+        geometry="primitive: plane; height: 3; width: 4"
+        material="src: url(img/cubismo7.jpg)"
+    ></a-entity>
+  </a-entity>
+
+  <a-entity position="-0.20 6 10.509" rotation="0 180 0" class="cubismo">
+    <a-entity
+        geometry="primitive: plane; height: 3; width: 4"
+        material="src: url(img/cubismo8.jpg)"
+    ></a-entity>
+  </a-entity>
+
+  <a-entity position="8 6 10.509" rotation="0 180 0" class="cubismo">
+    <a-entity
+        geometry="primitive: plane; height: 3; width: 4"
+        material="src: url(img/cubismo9.jpg)"
+    ></a-entity>
+  </a-entity>
+
+  <a-entity position="2.3 6 16.607" rotation="0 180 0" class="cubismo">
+    <a-entity
+        geometry="primitive: plane; height: 3; width: 4"
+        material="src: url(img/cubismo10.jpg)"
+    ></a-entity>
+  </a-entity>
+
+  <a-entity position="11.4 6 16.607" rotation="0 180 0" class="cubismo">
+    <a-entity
+        geometry="primitive: plane; height: 3; width: 4"
+        material="src: url(img/cubismo11.jpg)"
+    ></a-entity>
+  </a-entity>
+
+  <a-entity position="16.82 6 5.3" rotation="0 270 0" class="cubismo">
+    <a-entity
+        geometry="primitive: plane; height: 5; width: 6"
+        material="src: url(img/cubismo12.jpg)"
+    ></a-entity>
+  </a-entity>
+
+  <a-entity position="18.37 6 4.1" rotation="0 90 0" class="cubismo">
+    <a-entity
+        geometry="primitive: plane; height: 3; width: 4"
+        material="src: url(img/cubismo13.jpg)"
+    ></a-entity>
+  </a-entity>
+
+  <a-entity position="18.37 6 12.5" rotation="0 90 0" class="cubismo">
+    <a-entity
+        geometry="primitive: plane; height: 3; width: 4"
+        material="src: url(img/cubismo14.jpg)"
+    ></a-entity>
+  </a-entity>
+
+  <a-entity position="22.50 6 16.8" rotation="0 180 0" class="cubismo">
+    <a-entity
+        geometry="primitive: plane; height: 4; width: 5"
+        material="src: url(img/cubismo15.jpg)"
+    ></a-entity>
+  </a-entity>
+
+  <a-entity position="26.76 6 6.974" rotation="0 270 0" class="cubismo">
+    <a-entity
+        geometry="primitive: plane; height: 4; width: 5"
+        material="src: url(img/cubismo16.jpg)"
+    ></a-entity>
+  </a-entity>
+
+  <a-entity position="40 6 16.8" rotation="0 180 0" class="cubismo">
+    <a-entity
+        geometry="primitive: plane; height: 4; width: 5"
+        material="src: url(img/cubismo17.jpg)"
+    ></a-entity>
+  </a-entity>
+
+  <a-entity position="53.95 6 16.8" rotation="0 180 0" class="cubismo">
+    <a-entity
+        geometry="primitive: plane; height: 4; width: 5"
+        material="src: url(img/cubismo18.jpg)"
+    ></a-entity>
+  </a-entity>
+
+  <a-entity position="16.82 6.5 -9.4" rotation="0 270 0" class="cubismo">
+    <a-entity
+        geometry="primitive: plane; height: 3; width: 4"
+        material="src: url(img/cubismo19.jpg)"
+    ></a-entity>
+  </a-entity>
+
+  <a-entity position="18.34 6.5 -9.699" rotation="0 90 0" class="cubismo">
+    <a-entity
+        geometry="primitive: plane; height: 3; width: 4"
+        material="src: url(img/cubismo20.jpg)"
+    ></a-entity>
+  </a-entity>
+
+  <a-entity position="28.22 6.5 6.062" rotation="0 90 0" class="cubismo">
+    <a-entity
+        geometry="primitive: plane; height: 3; width: 4"
+        material="src: url(img/cubismo21.jpg)"
+    ></a-entity>
+  </a-entity>
+
+  <a-entity position="33.33 6.5 10.726" rotation="0 180 0" class="cubismo">
+    <a-entity
+        geometry="primitive: plane; height: 3; width: 4"
+        material="src: url(img/cubismo22.jpg)"
+    ></a-entity>
+  </a-entity>
+
+  <a-entity position="45.1 6.5 10.726" rotation="0 180 0" class="cubismo">
+    <a-entity
+        geometry="primitive: plane; height: 3; width: 4"
+        material="src: url(img/cubismo23.jpg)"
+    ></a-entity>
+  </a-entity>
+
+  <a-entity position="62.54 6.5 10.1" rotation="0 270 0" class="cubismo">
+    <a-entity
+        geometry="primitive: plane; height: 5; width: 6"
+        material="src: url(img/cubismo24.jpg)"
+    ></a-entity>
+  </a-entity>
+
+  <a-entity position="33 6.5 -7.672" rotation="0 0 0" class="cubismo">
+    <a-entity
+        geometry="primitive: plane; height: 3; width: 4"
+        material="src: url(img/cubismo25.jpg)"
+    ></a-entity>
+  </a-entity>
+
+  <a-entity position="46.3 6.5 -7.672" rotation="0 0 0" class="cubismo">
+    <a-entity
+        geometry="primitive: plane; height: 3; width: 4"
+        material="src: url(img/cubismo26.jpg)"
+    ></a-entity>
+  </a-entity>
+
+  <a-entity position="48 6 -13.86" rotation="0 0 0" class="cubismo">
+    <a-entity
+        geometry="primitive: plane; height: 5; width: 6"
+        material="src: url(img/cubismo27.jpg)"
+    ></a-entity>
+  </a-entity>
+
+  <a-entity position="-7.28 6 6" rotation="0 270 0" class="cubismo">
+    <a-entity
+        geometry="primitive: plane; height: 4; width: 5"
+        material="src: url(img/cubismo28.jpg)"
+    ></a-entity>
+  </a-entity>
   <!--Cuadros surrealismo-->
   <a-entity position="-10 5 -14.30" class="surrealismo">
     <a-entity
@@ -169,17 +502,205 @@
   <a-entity position="-5.69 5 -7.886" class="surrealismo">
     <a-entity
         geometry="primitive: plane; height: 3; width: 4"
-        material="src: url(img/surrealismo3.jpg)"
+        material="src: url(img/surrealismo4.jpg)"
     ></a-entity>
   </a-entity>
 
   <a-entity position="1.8 5 -7.886" class="surrealismo">
     <a-entity
-        geometry="primitive: plane; height: 3; width: 4"
-        material="src: url(img/surrealismo3.jpg)"
+        geometry="primitive: plane; height: 4; width: 4"
+        material="src: url(img/surrealismo5.jpg)"
     ></a-entity>
   </a-entity>
 
+  <a-entity position="-5.84 6 0.662" rotation="0 90 0" class="surrealismo">
+    <a-entity
+        geometry="primitive: plane; height: 3; width: 4"
+        material="src: url(img/surrealismo6.jpg)"
+    ></a-entity>
+  </a-entity>
+
+  <a-entity position="-5.84 6 7.1" rotation="0 90 0" class="surrealismo">
+    <a-entity
+        geometry="primitive: plane; height: 3; width: 4"
+        material="src: url(img/surrealismo7.jpg)"
+    ></a-entity>
+  </a-entity>
+
+  <a-entity position="-0.20 6 10.509" rotation="0 180 0" class="surrealismo">
+    <a-entity
+        geometry="primitive: plane; height: 3; width: 4"
+        material="src: url(img/surrealismo8.jpg)"
+    ></a-entity>
+  </a-entity>
+
+  <a-entity position="8 6 10.509" rotation="0 180 0" class="surrealismo">
+    <a-entity
+        geometry="primitive: plane; height: 3; width: 4"
+        material="src: url(img/surrealismo9.jpg)"
+    ></a-entity>
+  </a-entity>
+
+  <a-entity position="2.3 6 16.607" rotation="0 180 0" class="surrealismo">
+    <a-entity
+        geometry="primitive: plane; height: 3; width: 4"
+        material="src: url(img/surrealismo10.jpg)"
+    ></a-entity>
+  </a-entity>
+
+  <a-entity position="11.4 6 16.607" rotation="0 180 0" class="surrealismo">
+    <a-entity
+        geometry="primitive: plane; height: 3; width: 4"
+        material="src: url(img/surrealismo11.jpg)"
+    ></a-entity>
+  </a-entity>
+
+  <a-entity position="16.82 6 5.3" rotation="0 270 0" class="surrealismo">
+    <a-entity
+        geometry="primitive: plane; height: 5; width: 6"
+        material="src: url(img/surrealismo12.jpg)"
+    ></a-entity>
+  </a-entity>
+
+  <a-entity position="18.37 6 4.1" rotation="0 90 0" class="surrealismo">
+    <a-entity
+        geometry="primitive: plane; height: 3; width: 4"
+        material="src: url(img/surrealismo13.jpg)"
+    ></a-entity>
+  </a-entity>
+
+  <a-entity position="18.37 6 12.5" rotation="0 90 0" class="surrealismo">
+    <a-entity
+        geometry="primitive: plane; height: 3; width: 4"
+        material="src: url(img/surrealismo14.jpg)"
+    ></a-entity>
+  </a-entity>
+
+  <a-entity position="22.50 6 16.8" rotation="0 180 0" class="surrealismo">
+    <a-entity
+        geometry="primitive: plane; height: 4; width: 5"
+        material="src: url(img/surrealismo15.jpg)"
+    ></a-entity>
+  </a-entity>
+
+  <a-entity position="26.76 6 6.974" rotation="0 270 0" class="surrealismo">
+    <a-entity
+        geometry="primitive: plane; height: 4; width: 5"
+        material="src: url(img/surrealismo16.jpg)"
+    ></a-entity>
+  </a-entity>
+
+  <a-entity position="40 6 16.8" rotation="0 180 0" class="surrealismo">
+    <a-entity
+        geometry="primitive: plane; height: 4; width: 5"
+        material="src: url(img/surrealismo17.jpg)"
+    ></a-entity>
+  </a-entity>
+
+  <a-entity position="53.95 6 16.8" rotation="0 180 0" class="surrealismo">
+    <a-entity
+        geometry="primitive: plane; height: 4; width: 5"
+        material="src: url(img/surrealismo18.jpg)"
+    ></a-entity>
+  </a-entity>
+
+  <a-entity position="16.82 6.5 -9.4" rotation="0 270 0" class="surrealismo">
+    <a-entity
+        geometry="primitive: plane; height: 3; width: 4"
+        material="src: url(img/surrealismo19.jpg)"
+    ></a-entity>
+  </a-entity>
+
+  <a-entity position="18.34 6.5 -9.699" rotation="0 90 0" class="surrealismo">
+    <a-entity
+        geometry="primitive: plane; height: 3; width: 4"
+        material="src: url(img/surrealismo20.jpg)"
+    ></a-entity>
+  </a-entity>
+
+  <a-entity position="28.22 6.5 6.062" rotation="0 90 0" class="surrealismo">
+    <a-entity
+        geometry="primitive: plane; height: 3; width: 4"
+        material="src: url(img/surrealismo21.jpg)"
+    ></a-entity>
+  </a-entity>
+
+  <a-entity position="33.33 6.5 10.726" rotation="0 180 0" class="surrealismo">
+    <a-entity
+        geometry="primitive: plane; height: 3; width: 4"
+        material="src: url(img/surrealismo22.jpg)"
+    ></a-entity>
+  </a-entity>
+
+  <a-entity position="45.1 6.5 10.726" rotation="0 180 0" class="surrealismo">
+    <a-entity
+        geometry="primitive: plane; height: 3; width: 4"
+        material="src: url(img/surrealismo23.jpg)"
+    ></a-entity>
+  </a-entity>
+
+  <a-entity position="62.54 6.5 10.1" rotation="0 270 0" class="surrealismo">
+    <a-entity
+        geometry="primitive: plane; height: 5; width: 6"
+        material="src: url(img/surrealismo24.jpg)"
+    ></a-entity>
+  </a-entity>
+
+  <a-entity position="33 6.5 -7.672" rotation="0 0 0" class="surrealismo">
+    <a-entity
+        geometry="primitive: plane; height: 3; width: 4"
+        material="src: url(img/surrealismo25.jpg)"
+    ></a-entity>
+  </a-entity>
+
+  <a-entity position="46.3 6.5 -7.672" rotation="0 0 0" class="surrealismo">
+    <a-entity
+        geometry="primitive: plane; height: 3; width: 4"
+        material="src: url(img/surrealismo26.jpg)"
+    ></a-entity>
+  </a-entity>
+
+  <a-entity position="48 6 -13.86" rotation="0 0 0" class="surrealismo">
+    <a-entity
+        geometry="primitive: plane; height: 5; width: 6"
+        material="src: url(img/surrealismo27.jpg)"
+    ></a-entity>
+  </a-entity>
+
+  <a-entity position="-7.28 6 6" rotation="0 270 0" class="surrealismo">
+    <a-entity
+        geometry="primitive: plane; height: 4; width: 5"
+        material="src: url(img/surrealismo28.jpg)"
+    ></a-entity>
+  </a-entity>
+<!--boton de musica-->
+   <a-entity position="-21 4 -5">
+    <a-entity
+      geometry="primitive: plane; height: 1; width: 2"
+      material="shader: flat; src: #cubes-thumb"
+      sound="on: click;src: #music; loop:true; positional:false" >
+      <a-text value="musica" color="green" align="center" position="0 0 0"></a-text>
+    </a-entity>
+</a-entity> 
+ <a-entity id="noteBlock" position="-21 5 -5" gltf-model="#note_block" scale="0.03 0.03 0.03"></a-entity>
+
+
+
+<!--Descripciones de los cuadros-->
+<!--descipcion del impresionismo-->
+<a-entity position="-21 5 -5" class="impresionismo-descripcion">
+  <a-text id="idupdateMe"  position="10.46 -1.70 -7.858" value="cuadro de impresionismo" color="black" align="center"></a-text>
+</a-entity>
+
+<!--descipcion del cubismo-->
+<a-entity position="-21 5 -5" class="cubismo-descripcion">
+<a-text id="idupdateMe"  position="10.46 -1.70 -7.858" value="cuadro de cubismo" color="black" align="center"></a-text>
+</a-entity>
+
+<!--descipcion del surrealismo-->
+<a-entity position="-21 5 -5" class="surrealismo-descripcion">
+<a-text id="idupdateMe"  position="10.46 -1.70 -7.858" value="cuadro de surrealismo" color="black" align="center"></a-text>
+</a-entity>
 
 
 <!--Opciones del museo-->
@@ -217,7 +738,7 @@
        <a-camera position="-19 3 5" rotation="-100 -80 0">
         <a-cursor></a-cursor>
       </a-camera> 
-  <a-entity environment="preset: default; dressingAmount: 10"></a-entity> 
+      <!-- <a-entity environment="preset: forest; ground: flat; dressing: trees; dressingAmount: 1"></a-entity>  -->
 
 
 
@@ -263,6 +784,51 @@
 
 
 
+
+
+
+
+
+
+
+    document.getElementById('cubismo-option').addEventListener('click', function() {
+        document.querySelectorAll('.cubismo-descripcion').forEach(function(el) {
+            el.setAttribute('visible', true);
+        });
+        document.querySelectorAll('.impresionismo-descripcion').forEach(function(el) {
+            el.setAttribute('visible', false);
+        });
+        document.querySelectorAll('.surrealismo-descripcion').forEach(function(el) {
+            el.setAttribute('visible', false);
+        });
+        
+    });
+
+    document.getElementById('impresionismo-option').addEventListener('click', function() {
+        document.querySelectorAll('.cubismo-descripcion').forEach(function(el) {
+            el.setAttribute('visible', false);
+        });
+        document.querySelectorAll('.impresionismo-descripcion').forEach(function(el) {
+            el.setAttribute('visible', true);
+        });
+        document.querySelectorAll('.surrealismo-descripcion').forEach(function(el) {
+            el.setAttribute('visible', false);
+        });
+        
+    });
+
+    document.getElementById('surrealismo-option').addEventListener('click', function() {
+        document.querySelectorAll('.cubismo-descripcion').forEach(function(el) {
+            el.setAttribute('visible', false);
+        });
+        document.querySelectorAll('.impresionismo-descripcion').forEach(function(el) {
+            el.setAttribute('visible', false);
+        });
+        document.querySelectorAll('.surrealismo-descripcion').forEach(function(el) {
+            el.setAttribute('visible', true);
+        });
+        
+    });
 
 </script>
     </a-scene>
