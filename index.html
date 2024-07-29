@@ -2,6 +2,11 @@
   <head>
     <script src="https://aframe.io/releases/1.6.0/aframe.min.js"></script>
     <script src="https://unpkg.com/aframe-environment-component/dist/aframe-environment-component.min.js"></script>
+
+
+    <script src="https://rawgit.com/Ctrl-Alt-Zen/aframe-mobile-controls/master/components/twoway-motion/twoway-motion.js"></script>
+    
+    
   </head>
   <body>
     <a-scene>
@@ -734,8 +739,8 @@
 
 
 
-
-       <a-camera position="-19 3 5" rotation="-100 -80 0">
+    
+       <a-camera position="-19 3 5" rotation="-100 -80 0" twoway-motion="speed: 20; touchSensitivity: 0.2" tilt-turn>
         <a-cursor></a-cursor>
       </a-camera> 
       <!-- <a-entity environment="preset: forest; ground: flat; dressing: trees; dressingAmount: 1"></a-entity>  -->
