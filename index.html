@@ -11,9 +11,9 @@
   <body>
     <a-scene>
       <a-assets>
-         <!-- <img id="pisoTexture" src="textures/marble.jpeg"> -->
-         <!-- <img id="paredesTexture" src="textures/bricks2.jpeg">  -->
-        <!-- <img id="techoTexture" src="textures/tiles.jpeg">   -->
+          <img id="pisoTexture" src="textures/marble.jpeg"> 
+          <img id="paredesTexture" src="textures/bricks2.jpeg">  
+         <img id="techoTexture" src="textures/tiles.jpeg">  
 <!--sonido museo-->
   <!-- <audio id="music" src="music/254.mp3" autoplay="true" loop="true"></audio> -->
   <audio id="music" src="music/254.mp3" loop="true"></audio>
@@ -70,15 +70,15 @@
     <!-- <a-box src="#techoTexture" position="0 10 0" width="30" height="1" depth="30"></a-box> -->
 
     <!--piso del museo -->
-    <!-- <a-plane id="piso" position="24.14 0.1 1.631" src="#pisoTexture" height="78.67" width="32.379" rotation="-90 90 0"></a-plane> -->
+     <a-plane id="piso" position="24.14 0.1 1.631" src="#pisoTexture" height="78.67" width="32.379" rotation="-90 90 0"></a-plane>
     <!--techo-->
-    <!-- <a-plane id="techo" position="24.14 9.8 1.631" src="#techoTexture" height="78.67" width="32.379" rotation="90 90 0"></a-plane>  -->
+     <a-plane id="techo" position="24.14 9.8 1.631" src="#techoTexture" height="78.67" width="32.379" rotation="90 90 0"></a-plane> 
   </a-entity>
 
 
   <!--bonsai-->
-  <!-- <a-entity id="bonsai1" position="4.093 0.115 -0.371" gltf-model="#bonsai" scale="0.03 0.03 0.03"></a-entity>
-  <a-entity id="bonsai2" position="61.12 0.115 -8.796" gltf-model="#bonsai" scale="0.04 0.04 0.04"></a-entity> -->
+  <a-entity id="bonsai1" position="4.093 0.115 -0.371" gltf-model="#bonsai" scale="0.03 0.03 0.03"></a-entity>
+  <a-entity id="bonsai2" position="61.12 0.115 -8.796" gltf-model="#bonsai" scale="0.04 0.04 0.04"></a-entity>
   <!--bancas-->
   <a-entity id="banca1" position="-14.1 0.115 5.306" gltf-model="#banca" scale="0.03 0.03 0.03" rotation="0 90 0"></a-entity>
   <a-entity id="banca2" position="42.70 0.115 3.035" gltf-model="#banca" scale="0.04 0.04 0.04" rotation="0 0 0"></a-entity>
@@ -119,49 +119,49 @@
     ></a-entity>
   </a-entity>
 
-  <a-entity position="1.8 5 -7.886" class="impresionismo">
+  <a-entity id="impresionismo5" position="1.8 5 -7.886" class="impresionismo">
     <a-entity
         geometry="primitive: plane; height: 4; width: 4"
         material="src: url(img/impresionismo5.jpg)"
     ></a-entity>
   </a-entity>
 
-  <a-entity position="-5.84 6 0.662" rotation="0 90 0" class="impresionismo">
+  <a-entity id="impresionismo6" position="-5.84 6 0.662" rotation="0 90 0" class="impresionismo">
     <a-entity
         geometry="primitive: plane; height: 3; width: 4"
         material="src: url(img/impresionismo6.jpg)"
     ></a-entity>
   </a-entity>
 
-  <a-entity position="-5.84 6 7.1" rotation="0 90 0" class="impresionismo">
+  <a-entity id="impresionismo7" position="-5.84 6 7.1" rotation="0 90 0" class="impresionismo">
     <a-entity
         geometry="primitive: plane; height: 3; width: 4"
         material="src: url(img/impresionismo7.jpg)"
     ></a-entity>
   </a-entity>
 
-  <a-entity position="-0.20 6 10.509" rotation="0 180 0" class="impresionismo">
+  <a-entity id="impresionismo8" position="-0.20 6 10.509" rotation="0 180 0" class="impresionismo">
     <a-entity
         geometry="primitive: plane; height: 3; width: 4"
         material="src: url(img/impresionismo8.jpg)"
     ></a-entity>
   </a-entity>
 
-  <a-entity position="8 6 10.509" rotation="0 180 0" class="impresionismo">
+  <a-entity id="impresionismo9" position="8 6 10.509" rotation="0 180 0" class="impresionismo">
     <a-entity
         geometry="primitive: plane; height: 3; width: 4"
         material="src: url(img/impresionismo9.jpg)"
     ></a-entity>
   </a-entity>
 
-  <a-entity position="2.3 6 16.607" rotation="0 180 0" class="impresionismo">
+  <a-entity id="impresionismo10" position="2.3 6 16.607" rotation="0 180 0" class="impresionismo">
     <a-entity
         geometry="primitive: plane; height: 3; width: 4"
         material="src: url(img/impresionismo10.jpg)"
     ></a-entity>
   </a-entity>
 
-  <a-entity position="11.4 6 16.607" rotation="0 180 0" class="impresionismo">
+  <a-entity id="impresionismo11" position="11.4 6 16.607" rotation="0 180 0" class="impresionismo">
     <a-entity
         geometry="primitive: plane; height: 3; width: 4"
         material="src: url(img/impresionismo11.jpg)"
@@ -308,7 +308,7 @@
     ></a-entity>
   </a-entity>
 
-  <a-entity position="-5.69 5 -7.886" class="cubismo">
+  <a-entity id="cubismo4" position="-5.69 5 -7.886" class="cubismo">
     <a-entity
         geometry="primitive: plane; height: 3; width: 4"
         material="src: url(img/cubismo4.jpg)"
@@ -694,20 +694,110 @@
 <!--Descripciones de los cuadros-->
 <!--descipcion del impresionismo-->
 <a-entity position="-21 5 -5" class="impresionismo-descripcion">
-  <a-text id="idupdateMe"  position="10.46 -1.70 -7.858" value="cuadro de impresionismo" color="black" align="center"></a-text>
+  <a-text  position="10.90 -2.20 -9.405" value="La noche estrellada del pintor postimpresionista neerlandés Vincent van Gogh. Pintado en
+   junio de 1889" color="black" align="center"></a-text>
+</a-entity>
+<a-entity position="-21 5 -5" class="impresionismo-descripcion">
+  <a-text  position="26.08 -2.20 -9.405" value="sol naciente es un cuadro del pintor francés Claude Monet" color="black" align="center"></a-text>
+</a-entity>
+<a-entity position="-21 5 -5" class="impresionismo-descripcion">
+  <a-text  position="33.40 -2.20 -9.405" value="Two Women on the Beach - Michael Peter Ancher" color="black" align="center"></a-text>
+</a-entity>
+<a-entity position="-21 5 -5" class="impresionismo-descripcion">
+  <a-text position="15.15 -2.20 -2.913" value="Saint Mammes Evening - Alfred Sisley" color="black" align="center"></a-text>
+</a-entity>
+<a-entity position="-21 5 -5" class="impresionismo-descripcion">
+  <a-text position="22.76 -2.59 -2.913" value="Boulevard Montmartre, at night - Camille Pissarro" color="black" align="center"></a-text>
+</a-entity>
+<a-entity position="-21 5 -5" class="impresionismo-descripcion">
+  <a-text position="15.21 -1.07 5.673" rotation="0 90 0" value="Sol naciente - Claude Monet
+  " color="black" align="center"></a-text>
+</a-entity>
+<a-entity position="-21 5 -5" class="impresionismo-descripcion">
+  <a-text position="15.21 -1.07 11.981" rotation="0 90 0" value="Almendro en flor - Vincent Van Gogh" color="black" align="center"></a-text>
+</a-entity>
+<a-entity position="-21 5 -5" class="impresionismo-descripcion">
+  <a-text position="20.76 -1.43 15.9413" rotation="0 180 0" value="La Urraca - Claude Monet" color="black" align="center"></a-text>
+</a-entity>
+<a-entity position="-21 5 -5" class="impresionismo-descripcion">
+  <a-text position="28.93 -1.43 15.9413" rotation="0 180 0" value="El almuerzo de los remeros - Pierre-Auguste Renoir" color="black" align="center"></a-text>
+</a-entity>
+<a-entity position="-21 5 -5" class="impresionismo-descripcion">
+  <a-text position="23.21 -1.45 21.815" rotation="0 180 0" value="The Poppy field - Claude Monet" color="black" align="center"></a-text>
+</a-entity>
+<!--continuar la 11 todos-->
+<a-entity id="descripcion" position="-21 5 -5" class="impresionismo-descripcion">
+  <a-text position="32.64 -1.45 21.815" rotation="0 180 0" value="The Poppy field - Claude Monet" color="black" align="center"></a-text>
 </a-entity>
 
 <!--descipcion del cubismo-->
 <a-entity position="-21 5 -5" class="cubismo-descripcion">
-<a-text id="idupdateMe"  position="10.46 -1.70 -7.858" value="cuadro de cubismo" color="black" align="center"></a-text>
+<a-text position="10.90 -2.20 -9.405" value="El cubismo de Pablo Picasso: Una revolución artística" color="black" align="center"></a-text>
 </a-entity>
-
+<a-entity position="-21 5 -5" class="cubismo-descripcion">
+  <a-text position="26.08 -2.20 -9.405" value="Arlequin es una pintura al óleo sobre lienzo realizada por Pablo Picasso en 1917 en Barcelona" color="black" align="center"></a-text>
+</a-entity>
+<a-entity position="-21 5 -5" class="cubismo-descripcion">
+  <a-text position="33.40 -2.20 -9.405" value="Portrait of Andre Mare
+  Fernand Leger" color="black" align="center"></a-text>
+</a-entity>
+<a-entity position="-21 5 -5" class="cubismo-descripcion">
+  <a-text position="15.15 -2.20 -2.913" value="Guernica es un cuadro de Pablo Picasso, pintado entre los meses de mayo y junio de 1937" color="black" align="center"></a-text>
+</a-entity>
+<a-entity position="-21 5 -5" class="cubismo-descripcion">
+  <a-text position="22.76 -2.59 -2.913" value="Cubist Face - Wifredo Lam" color="black" align="center"></a-text>
+</a-entity>
+<a-entity position="-21 5 -5" class="cubismo-descripcion">
+  <a-text position="15.21 -1.07 5.673" rotation="0 90 0" value="Turning Road at Montgeroult
+  Paul Cezanne" color="black" align="center"></a-text>
+</a-entity>
+<a-entity position="-21 5 -5" class="cubismo-descripcion">
+  <a-text position="15.21 -1.07 11.981" rotation="0 90 0" value="Chateau Noir - Paul Cézanne" color="black" align="center"></a-text>
+</a-entity>
+<a-entity position="-21 5 -5" class="cubismo-descripcion">
+  <a-text position="20.76 -1.43 15.9413" rotation="0 180 0" value="Well by the Winding Road in the Park of Chateau Noir - Paul Cezanne" color="black" align="center"></a-text>
+</a-entity>
+<a-entity position="-21 5 -5" class="cubismo-descripcion">
+  <a-text position="28.93 -1.43 15.9413" rotation="0 180 0" value="Still life with three skulls - Paul Cezanne" color="black" align="center"></a-text>
+</a-entity>
+<a-entity position="-21 5 -5" class="cubismo-descripcion">
+  <a-text position="23.21 -1.45 21.815" rotation="0 180 0" value="Roses in a Bottle - Paul Cezanne" color="black" align="center"></a-text>
+</a-entity>
 <!--descipcion del surrealismo-->
 <a-entity position="-21 5 -5" class="surrealismo-descripcion">
-<a-text id="idupdateMe"  position="10.46 -1.70 -7.858" value="cuadro de surrealismo" color="black" align="center"></a-text>
+<a-text position="10.90 -2.20 -9.405" value="La persistencia de la memoria, conocido como Los relojes blandos​ o Los relojes derretidos, ​ es un famoso cuadro del pintor Salvador Dali pintado en 1931" color="black" align="center"></a-text>
 </a-entity>
-
-
+<a-entity position="-21 5 -5" class="surrealismo-descripcion">
+  <a-text position="26.08 -2.20 -9.405" value="The Big Wheel
+  Marc Chagall" color="black" align="center"></a-text>
+</a-entity>
+<a-entity position="-21 5 -5" class="surrealismo-descripcion">
+  <a-text position="33.40 -2.20 -9.405" value="Final Frontier Voyager (FES) The Flat Earth Society
+  George Grie" color="black" align="center"></a-text>
+</a-entity>
+<a-entity position="-21 5 -5" class="surrealismo-descripcion">
+  <a-text position="15.15 -2.20 -2.913" value="Feast Day (Rabbi with Lemon)
+  Marc Chagall" color="black" align="center"></a-text>
+</a-entity>
+<a-entity position="-21 5 -5" class="surrealismo-descripcion">
+  <a-text position="22.76 -2.59 -2.913" value="Retrato de Rodolfo II en traje de Vertumno
+  Giuseppe Arcimboldo" color="black" align="center"></a-text>
+</a-entity>
+<a-entity position="-21 5 -5" class="surrealismo-descripcion">
+  <a-text position="15.21 -1.07 5.673" rotation="0 90 0" value="Acrobat - Pablo Picasso" color="black" align="center"></a-text>
+</a-entity>
+<a-entity position="-21 5 -5" class="surrealismo-descripcion">
+  <a-text position="15.21 -1.07 11.981" rotation="0 90 0" value="Bookplate Bastiaan Kist - M.C. Escher" color="black" align="center"></a-text>
+</a-entity>
+<a-entity position="-21 5 -5" class="surrealismo-descripcion">
+  <a-text position="20.76 -1.43 15.9413" rotation="0 180 0" value="Mondspaziergang - Catrin Welz-Stein" color="black" align="center"></a-text>
+</a-entity>
+<a-entity position="-21 5 -5" class="surrealismo-descripcion">
+  <a-text position="28.93 -1.43 15.9413" rotation="0 180 0" value="Invention - Man Ray" color="black" align="center"></a-text>
+</a-entity>
+<a-entity position="-21 5 -5" class="surrealismo-descripcion">
+  <a-text position="23.21 -1.45 21.815" rotation="0 180 0" value="Politvarus - Stanislaw Szukalski" color="black" align="center"></a-text>
+</a-entity>
 <!--Opciones del museo-->
       <a-entity position="-21 2 -5">
         <a-entity class="link" id="cubismo-option"
@@ -740,10 +830,10 @@
 
 
     
-       <a-camera position="-19 3 5" rotation="-100 -80 0" twoway-motion="speed: 20; touchSensitivity: 0.2" tilt-turn>
+       <a-camera position="-19 3.5 5" rotation="-100 -80 0" twoway-motion="speed: 20; touchSensitivity: 0.2" tilt-turn>
         <a-cursor></a-cursor>
       </a-camera> 
-      <!-- <a-entity environment="preset: forest; ground: flat; dressing: trees; dressingAmount: 1"></a-entity>  -->
+       <a-entity environment="preset: forest; ground: flat; dressing: trees; dressingAmount: 1"></a-entity> 
 
 
 
