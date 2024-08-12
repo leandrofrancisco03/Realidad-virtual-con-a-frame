@@ -5,9 +5,10 @@
 
 
     <script src="https://rawgit.com/Ctrl-Alt-Zen/aframe-mobile-controls/master/components/twoway-motion/twoway-motion.js"></script>
+
   </head>
   <body>
-    <a-scene>
+    <a-scene physics="driver: ammo; debug: true">
       <a-assets>
           <img id="pisoTexture" src="textures/marble.jpeg"> 
           <img id="paredesTexture" src="textures/bricks2.jpeg">  
@@ -31,7 +32,7 @@
     
 
 
-
+<!--el static-body para evitar atravesar paredes-->
   <a-entity position="0 0 0">
     <!-- Paredes del museo -->
     <a-box  scale="0.32588 1 1" src="#paredesTexture" position="-10.0592 5 -15" width="30" height="10" depth="1"></a-box>
@@ -39,27 +40,27 @@
     <a-box  scale="1.00949 1 1"  src="#paredesTexture" position="48.61171 5 -15" width="30" height="10" depth="1"></a-box>
     <a-box  scale="0.28871 1 0.99"  src="#paredesTexture" position="-11.66364 5 17.37851" width="30" height="10" depth="1"></a-box>
     <a-box  scale="1.13911 1 0.99"  src="#paredesTexture" position="14.42549 5 17.37851" width="30" height="10" depth="1"></a-box>
-    <a-box     scale="0.936 1 0.99"  src="#paredesTexture" position="49.30585 5 17.379" width="30" height="10" depth="1"></a-box>
+    <a-box  scale="0.936 1 0.99"  src="#paredesTexture" position="49.30585 5 17.379" width="30" height="10" depth="1"></a-box>
     <a-box  scale="1 1 0.336"  src="#paredesTexture" position="17.79761 5 -9.52911" width="1" height="10" depth="30"></a-box>
-    <a-box     scale="1 1 0.21"  src="#paredesTexture" position="63.274 5 -11.56895" width="1" height="10" depth="30"></a-box>
-    <a-box   scale="1 1 0.73"  src="#paredesTexture" position="63.158 5 6.99934" width="1" height="10" depth="30"></a-box>
-    <a-box scale="1 1 0.544"  src="#paredesTexture" position="17.798 5 8.73827" width="1" height="10" depth="30"></a-box>
+    <a-box  scale="1 1 0.21"  src="#paredesTexture" position="63.274 5 -11.56895" width="1" height="10" depth="30"></a-box>
+    <a-box  scale="1 1 0.73"  src="#paredesTexture" position="63.158 5 6.99934" width="1" height="10" depth="30"></a-box>
+    <a-box  scale="1 1 0.544"  src="#paredesTexture" position="17.798 5 8.73827" width="1" height="10" depth="30"></a-box>
     <a-box  scale="1 1 1.86493"  src="#paredesTexture" position="-15.439 5 7.57582" width="1" height="10" depth="10"></a-box>
-    <a-box   scale="1 1 0.65176"  src="#paredesTexture" position="-15.439 5 -10.62816" width="1" height="10" depth="15"></a-box>
+    <a-box  scale="1 1 0.65176"  src="#paredesTexture" position="-15.439 5 -10.62816" width="1" height="10" depth="15"></a-box>
   
     <!--paredes adentro-->
-    <a-box    scale="1 1 8.00148"  src="#paredesTexture" position="5.89956 5 -5.00019" width="1" height="10" depth="1"></a-box>
+    <a-box     scale="1 1 8.00148"  src="#paredesTexture" position="5.89956 5 -5.00019" width="1" height="10" depth="1"></a-box>
     <a-box   rotation="0 90 0"   scale="1 1 15.058"  src="#paredesTexture" position="-2.08312 5 -8.48515" width="1" height="10" depth="1"></a-box>
 
-    <a-box rotation="0 90 0"   scale="1 1 20.545"  src="#paredesTexture" position="3.226 5 11.49214" width="1" height="10" depth="1"></a-box>
-    <a-box    scale="1 1 13.66796"  src="#paredesTexture" position="-6.52174 5 4.35652" width="1" height="10" depth="1"></a-box>
+    <a-box  rotation="0 90 0"   scale="1 1 20.545"  src="#paredesTexture" position="3.226 5 11.49214" width="1" height="10" depth="1"></a-box>
+    <a-box  scale="1 1 13.66796"  src="#paredesTexture" position="-6.52174 5 4.35652" width="1" height="10" depth="1"></a-box>
 
     <!--segunda habitacion-->
-    <a-box    scale="1 1 8.00148"  src="#paredesTexture" position="53.1478 5 -5.00019" width="1" height="10" depth="1"></a-box>
+    <a-box     scale="1 1 8.00148"  src="#paredesTexture" position="53.1478 5 -5.00019" width="1" height="10" depth="1"></a-box>
     <a-box  rotation="0 90 0"   scale="1 1 27.69691"  src="#paredesTexture" position="39.19889 5 -8.413" width="1" height="10" depth="1"></a-box>
 
     <a-box   rotation="0 90 0"   scale="1 1 27.951"  src="#paredesTexture" position="40.976 5 11.4875" width="1" height="10" depth="1"></a-box>
-    <a-box  scale="1 1 13.66796"  src="#paredesTexture" position="27.51688 5 4.35652" width="1" height="10" depth="1"></a-box>
+    <a-box   scale="1 1 13.66796"  src="#paredesTexture" position="27.51688 5 4.35652" width="1" height="10" depth="1"></a-box>
 
     <!--  dentro del museo -->
     <!-- <a-box src="#paredesAdentroTexture" position="0 5 -5" width="5" height="10" depth="10"></a-box>
@@ -81,11 +82,12 @@
   <a-entity id="banca1" position="-14.1 0.115 5.306" gltf-model="#banca" scale="0.03 0.03 0.03" rotation="0 90 0"></a-entity>
   <a-entity id="banca2" position="42.70 0.115 3.035" gltf-model="#banca" scale="0.04 0.04 0.04" rotation="0 0 0"></a-entity>
   <!--luz1-->
-  <!-- <a-entity id="luz1" position="2.463 7.552 3.119" gltf-model="#luces" scale="0.003 0.003 0.003" rotation="0 90 0"></a-entity>
-  <a-entity light="type: point; intensity: 0.2; color: #FFF" position="2.463 7.552 3.119"></a-entity> -->
+  <a-entity id="luz1" position="2.463 7.552 3.119" gltf-model="#luces" scale="0.003 0.003 0.003" rotation="0 90 0"></a-entity>
+  <a-entity light="type: point; intensity: 0.2; color: #FFF" position="2.463 7.552 3.119"></a-entity>
   <!--luz2-->
-  <!-- <a-entity id="luz2" position="40.97 7.552 2.062" gltf-model="#luces" scale="0.003 0.003 0.003" rotation="0 90 0"></a-entity>
-  <a-entity light="type: point; intensity: 0.2; color: #FFF" position="40.97 7.552 2.062"></a-entity> -->
+  <a-entity id="luz2" position="40.97 7.552 2.062" gltf-model="#luces" scale="0.003 0.003 0.003" rotation="0 90 0"></a-entity>
+  <a-entity light="type: point; intensity: 0.2; color: #FFF" position="40.97 7.552 2.062"></a-entity>
+
 
 
    <!--Cuadros impresionismo-->
@@ -677,15 +679,17 @@
     ></a-entity>
   </a-entity>
 <!--boton de musica-->
-   <a-entity position="-21 4 -5">
+<a-entity position="-21 4 -5">
     <a-entity
       geometry="primitive: plane; height: 1; width: 2"
       material="shader: flat; src: #cubes-thumb"
-      sound="on: click;src: #music; loop:true; positional:false" >
+      sound="on: click;src: #music; loop:true; positional:false"
+      animation__mouseenter="property: scale; to: 1.2 1.2 1.2; startEvents: mouseenter; dur: 300"
+      animation__mouseleave="property: scale; to: 1 1 1; startEvents: mouseleave; dur: 300">
       <a-text value="musica" color="green" align="center" position="0 0 0"></a-text>
     </a-entity>
 </a-entity> 
- <a-entity id="noteBlock" position="-21 5 -5" gltf-model="#note_block" scale="0.03 0.03 0.03"></a-entity>
+
 
 
 
@@ -1002,9 +1006,11 @@
 
 
     
-       <a-camera position="-19 3.5 5" rotation="-100 -80 0" twoway-motion="speed: 20; touchSensitivity: 0.2" tilt-turn>
+        <a-camera position="-19 3.9 5" rotation="-100 -80 0" twoway-motion="speed: 20; touchSensitivity: 0.2" tilt-turn>
         <a-cursor></a-cursor>
-      </a-camera> 
+      </a-camera>  
+
+    
         <a-entity environment="preset: forest; ground: flat; dressing: trees; dressingAmount: 1"></a-entity> 
 
 
